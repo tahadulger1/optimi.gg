@@ -563,7 +563,10 @@ body {
 /* Passive scroll için optimize edilmiş konteynerler */
 .scroll-container {
   -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
+  /* Yatay carousel'lerde yatay overscroll'u kısıtla ama
+     dikeyde sayfanın scroll almasını ENGELLEME (mobilde kritik) */
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: auto;
   scroll-behavior: smooth;
 }
 

@@ -61,19 +61,21 @@ function TournamentCard({ tournament, featured = false }: TournamentCardProps) {
               {tournament.title}
             </h3>
             
-            {/* Info Items with Hover Scale Effect */}
-            <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-4">
-              <div className="flex items-center gap-1.5 transition-all duration-300 group-hover:scale-110 group-hover:text-foreground">
-                <CalendarDays className="h-4 w-4 transition-colors group-hover:text-primary" />
+            {/* Info Items (mobilde sabit layout; hover efektleri sadece hover destekleyen cihazlarda) */}
+            <div className="grid grid-cols-1 gap-2 text-sm text-muted-foreground mb-4 sm:flex sm:flex-wrap sm:gap-4">
+              <div className="flex items-center gap-1.5 transition-all duration-300 md:group-hover:scale-110 md:group-hover:text-foreground">
+                <CalendarDays className="h-4 w-4 transition-colors md:group-hover:text-primary" />
                 <span>{formattedDate}</span>
               </div>
-              <div className="flex items-center gap-1.5 transition-all duration-300 group-hover:scale-110 group-hover:text-foreground">
-                <Users className="h-4 w-4 transition-colors group-hover:text-primary" />
+              <div className="flex items-center gap-1.5 transition-all duration-300 md:group-hover:scale-110 md:group-hover:text-foreground">
+                <Users className="h-4 w-4 transition-colors md:group-hover:text-primary" />
                 <span>{tournament.currentParticipants}/{tournament.maxParticipants}</span>
               </div>
-              <div className="flex items-center gap-1.5 transition-all duration-300 group-hover:scale-115">
-                <Trophy className="h-4 w-4 text-primary transition-transform group-hover:rotate-12" />
-                <span className="text-primary font-bold text-base group-hover:text-lg transition-all duration-300">{formattedPrize}</span>
+              <div className="flex items-center gap-1.5 transition-all duration-300 md:group-hover:scale-110">
+                <Trophy className="h-4 w-4 text-primary transition-transform md:group-hover:rotate-12" />
+                <span className="text-primary font-bold text-base md:group-hover:text-lg transition-all duration-300">
+                  {formattedPrize}
+                </span>
               </div>
             </div>
 
