@@ -16,7 +16,9 @@ const pageVariants = {
 // Kısa transition süresi - hızlı sayfa geçişi
 const pageTransition = {
   duration: 0.15,
-  ease: "easeOut",
+  // framer-motion bazı sürümlerde string ease tipini kabul etmiyor
+  // easeOut benzeri cubic-bezier
+  ease: [0.16, 1, 0.3, 1] as const,
 };
 
 /**

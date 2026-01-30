@@ -492,8 +492,8 @@ export const USER_RANK_LABELS: Record<UserRank, { text: string; className: strin
   [USER_RANK.GOLD]: { text: "Altın", className: "bg-yellow-500 text-black" },
   [USER_RANK.PLATINUM]: { text: "Platin", className: "bg-cyan-400 text-black" },
   [USER_RANK.DIAMOND]: { text: "Elmas", className: "bg-blue-500 text-white" },
+  [USER_RANK.MASTERY]: { text: "Ustalık", className: "bg-red-600 text-white" },
   [USER_RANK.MASTER]: { text: "Usta", className: "bg-purple-500 text-white" },
-  [USER_RANK.GRANDMASTER]: { text: "Büyük Usta", className: "bg-red-600 text-white" },
 } as const;
 
 /**
@@ -505,8 +505,8 @@ export const USER_RANK_ORDER: Record<UserRank, number> = {
   [USER_RANK.GOLD]: 3,
   [USER_RANK.PLATINUM]: 4,
   [USER_RANK.DIAMOND]: 5,
-  [USER_RANK.MASTER]: 6,
-  [USER_RANK.GRANDMASTER]: 7,
+  [USER_RANK.MASTERY]: 6,
+  [USER_RANK.MASTER]: 7,
 } as const;
 
 /**
@@ -527,7 +527,7 @@ const mockUsers: UserSummary[] = [
   { id: "user-002", username: "NightOwl34", avatarUrl: null, rank: USER_RANK.PLATINUM },
   { id: "user-003", username: "ProGamer2023", avatarUrl: null, rank: USER_RANK.MASTER },
   { id: "user-004", username: "TurboKing", avatarUrl: null, rank: USER_RANK.GOLD },
-  { id: "user-005", username: "CyberNinja", avatarUrl: null, rank: USER_RANK.GRANDMASTER },
+  { id: "user-005", username: "CyberNinja", avatarUrl: null, rank: USER_RANK.MASTERY },
   { id: "user-006", username: "PixelWarrior", avatarUrl: null, rank: USER_RANK.SILVER },
   { id: "user-007", username: "DragonSlayer", avatarUrl: null, rank: USER_RANK.DIAMOND },
   { id: "user-008", username: "StormBreaker", avatarUrl: null, rank: USER_RANK.PLATINUM },
@@ -784,7 +784,7 @@ const mockTeamA: Team = {
     { id: "user-002", username: "NightOwl34", avatarUrl: null, rank: USER_RANK.PLATINUM },
     { id: "user-003", username: "ProGamer2023", avatarUrl: null, rank: USER_RANK.MASTER },
     { id: "user-004", username: "TurboKing", avatarUrl: null, rank: USER_RANK.GOLD },
-    { id: "user-005", username: "CyberNinja", avatarUrl: null, rank: USER_RANK.GRANDMASTER },
+    { id: "user-005", username: "CyberNinja", avatarUrl: null, rank: USER_RANK.MASTERY },
   ],
   captain: { id: "user-001", username: "ShadowHunter", avatarUrl: null, rank: USER_RANK.DIAMOND },
 };

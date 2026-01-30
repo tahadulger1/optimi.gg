@@ -221,7 +221,7 @@ export function RankTab({ user }: RankTabProps) {
       </Card>
 
       {/* Sonraki Rütbe Hedefi */}
-      {!isMaxRank && nextConfig && (
+      {!isMaxRank && nextTier && nextConfig && (
         <Card className="bg-optimi-surface border-border/50">
           <CardContent className="pt-6">
             <div className="flex items-center justify-between">

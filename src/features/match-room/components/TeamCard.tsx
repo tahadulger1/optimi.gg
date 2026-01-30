@@ -105,7 +105,12 @@ export function TeamCard({ team, side, isWinner }: TeamCardProps) {
                 </span>
 
                 {isCaptain && (
-                  <Crown className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-amber-500 shrink-0" title="Kaptan" />
+                  <span title="Kaptan" className="shrink-0">
+                    <Crown
+                      className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-amber-500"
+                      aria-label="Kaptan"
+                    />
+                  </span>
                 )}
 
                 <Badge

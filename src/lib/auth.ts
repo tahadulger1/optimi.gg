@@ -62,8 +62,8 @@ export const RANK_INFO: Record<UserRank, { label: string; color: string; bgColor
   gold: { label: "Altın", color: "text-yellow-500", bgColor: "bg-yellow-500/20" },
   platinum: { label: "Platin", color: "text-cyan-400", bgColor: "bg-cyan-400/20" },
   diamond: { label: "Elmas", color: "text-blue-400", bgColor: "bg-blue-400/20" },
-  master: { label: "Master", color: "text-purple-500", bgColor: "bg-purple-500/20" },
-  grandmaster: { label: "Grandmaster", color: "text-red-500", bgColor: "bg-red-500/20" },
+  mastery: { label: "Ustalık", color: "text-red-500", bgColor: "bg-red-500/20" },
+  master: { label: "Usta", color: "text-purple-500", bgColor: "bg-purple-500/20" },
 };
 
 /**

@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useState } from "react";
-import { useDropzone } from "react-dropzone";
+import { useDropzone, type FileRejection } from "react-dropzone";
 import { Upload, X, Image as ImageIcon, CheckCircle, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -90,7 +90,7 @@ export function ScreenshotUpload({ onUpload, disabled = false }: ScreenshotUploa
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  const onDrop = useCallback(async (acceptedFiles: File[], rejectedFiles: { errors: { message: string }[] }[]) => {
+  const onDrop = useCallback(async (acceptedFiles: File[], rejectedFiles: FileRejection[]) => {
     // Hata durumunu sıfırla
     setError(null);
 
@@ -180,8 +180,8 @@ export function ScreenshotUpload({ onUpload, disabled = false }: ScreenshotUploa
     );
   }
 
-  // Önizleme durumu
-  if (uploadState === "preview" && preview) {
+  // Önizleme / yükleme / hata durumu (aynı UI, sadece butonlar disable olur)
+  if ((uploadState === "preview" || uploadState === "uploading" || uploadState === "error") && preview) {
     return (
       <div className="space-y-4">
         <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-border bg-muted">
@@ -208,6 +208,10 @@ export function ScreenshotUpload({ onUpload, disabled = false }: ScreenshotUploa
             </span>
             <span>{(selectedFile.size / 1024 / 1024).toFixed(2)} MB</span>
           </div>
+        )}
+
+        {error && (
+          <p className="text-sm text-destructive">{error}</p>
         )}
 
         <div className="flex gap-2">
