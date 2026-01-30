@@ -85,7 +85,7 @@ export default function SSSPage() {
                 {item.question}
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                {item.hasVideoLink ? (
+                {"hasVideoLink" in item && item.hasVideoLink ? (
                   <>
                     Turnuva kayıt rehberi{" "}
                     <Link
