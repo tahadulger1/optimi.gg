@@ -1,0 +1,1130 @@
+@import "tailwindcss";
+
+/* ============================================
+   OPTIMI.GG ESPORTS THEME
+   Koyu tema, slate/zinc paleti
+   Modern espor estetiği
+   ============================================ */
+
+:root {
+  /* Primary Colors - Ana Marka Renkleri */
+  --primary: 47.9 95.8% 53.1%; /* Altın/Amber - Optimi vurgu rengi */
+  --primary-foreground: 26 83.3% 14.1%;
+
+  /* Background - Arka Plan Renkleri */
+  --background: 240 10% 3.9%; /* Neredeyse siyah */
+  --foreground: 0 0% 98%;
+
+  /* Card - Kart Renkleri */
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+
+  /* Popover - Açılır Menü */
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+
+  /* Secondary - İkincil Renkler */
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+
+  /* Muted - Soluk Renkler */
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+
+  /* Accent - Vurgu Renkleri */
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+
+  /* Destructive - Hata/Silme */
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+
+  /* Success - Başarı */
+  --success: 142 76% 36%;
+  --success-foreground: 0 0% 98%;
+
+  /* Warning - Uyarı */
+  --warning: 38 92% 50%;
+  --warning-foreground: 0 0% 0%;
+
+  /* Info - Bilgi */
+  --info: 199 89% 48%;
+  --info-foreground: 0 0% 98%;
+
+  /* Border - Kenarlık */
+  --border: 240 3.7% 15.9%;
+
+  /* Input - Giriş Alanları */
+  --input: 240 3.7% 15.9%;
+
+  /* Ring - Focus Ring */
+  --ring: 47.9 95.8% 53.1%;
+
+  /* Chart Renkleri */
+  --chart-1: 220 70% 50%;
+  --chart-2: 160 60% 45%;
+  --chart-3: 30 80% 55%;
+  --chart-4: 280 65% 60%;
+  --chart-5: 340 75% 55%;
+
+  /* Border Radius */
+  --radius: 0.625rem;
+
+  /* Sidebar */
+  --sidebar: 240 5.9% 10%;
+  --sidebar-foreground: 240 4.8% 95.9%;
+  --sidebar-primary: 47.9 95.8% 53.1%;
+  --sidebar-primary-foreground: 26 83.3% 14.1%;
+  --sidebar-accent: 240 3.7% 15.9%;
+  --sidebar-accent-foreground: 240 4.8% 95.9%;
+  --sidebar-border: 240 3.7% 15.9%;
+  --sidebar-ring: 47.9 95.8% 53.1%;
+
+  /* Optimi Özel Renkler */
+  --optimi-gold: 47.9 95.8% 53.1%;
+  --optimi-dark: 240 10% 6%;
+  --optimi-darker: 240 10% 3.9%;
+  --optimi-surface: 240 5.9% 10%;
+  --optimi-border: 240 3.7% 20%;
+  
+  /* Oyun Renkleri */
+  --game-valorant: 0 100% 50%;
+  --game-lol: 45 100% 50%;
+  --game-tft: 280 100% 60%;
+  --game-wildrift: 200 100% 50%;
+
+  /* Rütbe Renkleri */
+  --rank-bronze: 30 59% 50%;
+  --rank-bronze-dark: 30 59% 30%;
+  --rank-silver: 0 0% 75%;
+  --rank-silver-dark: 0 0% 50%;
+  --rank-gold: 51 100% 50%;
+  --rank-gold-dark: 43 74% 49%;
+  --rank-platinum: 181 100% 41%;
+  --rank-platinum-dark: 181 100% 27%;
+  --rank-diamond: 195 100% 50%;
+  --rank-diamond-dark: 210 100% 56%;
+  --rank-mastery: 282 100% 41%;
+  --rank-mastery-dark: 275 100% 25%;
+  --rank-master: 16 100% 50%;
+  --rank-master-dark: 348 83% 47%;
+}
+
+/* Light theme (opsiyonel - espor için nadiren kullanılır) */
+.light {
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+  --primary: 47.9 95.8% 53.1%;
+  --primary-foreground: 26 83.3% 14.1%;
+  --secondary: 240 4.8% 95.9%;
+  --secondary-foreground: 240 5.9% 10%;
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --accent: 240 4.8% 95.9%;
+  --accent-foreground: 240 5.9% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --ring: 47.9 95.8% 53.1%;
+}
+
+/* Tailwind CSS v4 Theme Configuration */
+@theme inline {
+  /* Colors */
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-success: hsl(var(--success));
+  --color-success-foreground: hsl(var(--success-foreground));
+  --color-warning: hsl(var(--warning));
+  --color-warning-foreground: hsl(var(--warning-foreground));
+  --color-info: hsl(var(--info));
+  --color-info-foreground: hsl(var(--info-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  
+  /* Optimi Özel Renkler */
+  --color-optimi-gold: hsl(var(--optimi-gold));
+  --color-optimi-yellow: hsl(var(--optimi-gold)); /* Alias for gold */
+  --color-optimi-dark: hsl(var(--optimi-dark));
+  --color-optimi-darker: hsl(var(--optimi-darker));
+  --color-optimi-surface: hsl(var(--optimi-surface));
+  --color-optimi-border: hsl(var(--optimi-border));
+  
+  /* Oyun Renkleri */
+  --color-game-valorant: hsl(var(--game-valorant));
+  --color-game-lol: hsl(var(--game-lol));
+  --color-game-tft: hsl(var(--game-tft));
+  --color-game-wildrift: hsl(var(--game-wildrift));
+
+  /* Rütbe Renkleri */
+  --color-rank-bronze: hsl(var(--rank-bronze));
+  --color-rank-bronze-dark: hsl(var(--rank-bronze-dark));
+  --color-rank-silver: hsl(var(--rank-silver));
+  --color-rank-silver-dark: hsl(var(--rank-silver-dark));
+  --color-rank-gold: hsl(var(--rank-gold));
+  --color-rank-gold-dark: hsl(var(--rank-gold-dark));
+  --color-rank-platinum: hsl(var(--rank-platinum));
+  --color-rank-platinum-dark: hsl(var(--rank-platinum-dark));
+  --color-rank-diamond: hsl(var(--rank-diamond));
+  --color-rank-diamond-dark: hsl(var(--rank-diamond-dark));
+  --color-rank-mastery: hsl(var(--rank-mastery));
+  --color-rank-mastery-dark: hsl(var(--rank-mastery-dark));
+  --color-rank-master: hsl(var(--rank-master));
+  --color-rank-master-dark: hsl(var(--rank-master-dark));
+
+  /* Border Radius */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Fonts */
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  /* Animations */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-fade-in: fade-in 0.3s ease-out;
+  --animate-fade-out: fade-out 0.3s ease-out;
+  --animate-slide-in: slide-in 0.3s ease-out;
+  --animate-slide-out: slide-out 0.3s ease-out;
+  --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Keyframe Animasyonları */
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+/* ============================================
+   LOADING SCREEN ANIMATIONS
+   Modern espor yükleme animasyonları
+   ============================================ */
+
+/* Yavaş Pulse - Logo glow için */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+/* Daha Yavaş Pulse - Arka plan efektleri için */
+@keyframes pulse-slower {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+}
+
+.animate-pulse-slower {
+  animation: pulse-slower 5s ease-in-out infinite;
+}
+
+/* Float Animation - Logo için */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+  75% {
+    transform: translateY(4px) rotate(-1deg);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Yavaş Ping - İç halka için */
+@keyframes ping-slow {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+}
+
+.animate-ping-slow {
+  animation: ping-slow 2s ease-in-out infinite;
+}
+
+/* Bounce Dot - Yükleniyor noktaları için */
+@keyframes bounce-dot {
+  0%, 60%, 100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+}
+
+.animate-bounce-dot {
+  animation: bounce-dot 1.2s ease-in-out infinite;
+}
+
+/* Yavaş Spin - Route loader için */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+/* Progress Loading Bar - Sonsuz döngü */
+@keyframes progress-loading {
+  0% {
+    width: 0%;
+    margin-left: 0%;
+  }
+  30% {
+    width: 40%;
+    margin-left: 0%;
+  }
+  50% {
+    width: 40%;
+    margin-left: 30%;
+  }
+  80% {
+    width: 20%;
+    margin-left: 80%;
+  }
+  100% {
+    width: 0%;
+    margin-left: 100%;
+  }
+}
+
+.animate-progress-loading {
+  animation: progress-loading 1.5s ease-in-out infinite;
+}
+
+/* SVG Path Draw Animation */
+@keyframes draw {
+  0% {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+  }
+  100% {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-draw {
+  animation: draw 2s ease-out forwards;
+}
+
+.animate-draw-delayed {
+  animation: draw 2s ease-out 0.5s forwards;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+}
+
+/* Scale Pulse - Merkez element için */
+@keyframes scale-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.85);
+    opacity: 0.7;
+  }
+}
+
+.animate-scale-pulse {
+  animation: scale-pulse 2s ease-in-out infinite;
+}
+
+/* Shimmer Effect - Skeleton için */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--muted)) 0%,
+    hsl(var(--muted-foreground) / 0.1) 50%,
+    hsl(var(--muted)) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* Glow Drop Shadow */
+.drop-shadow-glow {
+  filter: drop-shadow(0 0 20px hsl(var(--optimi-gold) / 0.5));
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* GPU-accelerated slide animations */
+@keyframes slide-in {
+  from {
+    transform: translate3d(0, -10px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(0, -10px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px hsl(var(--optimi-gold) / 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px hsl(var(--optimi-gold) / 0.8);
+  }
+}
+
+/* Slide up/down GPU-accelerated */
+@keyframes slide-up {
+  from {
+    transform: translate3d(0, 100%, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translate3d(0, -100%, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+/* Scale animations for modals */
+@keyframes scale-in {
+  from {
+    transform: scale(0.95) translate3d(0, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-out {
+  from {
+    transform: scale(1) translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.95) translate3d(0, 0, 0);
+    opacity: 0;
+  }
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  /* Smooth scroll - native performans */
+  scroll-behavior: smooth;
+  /* Overscroll davranışını kontrol et */
+  overscroll-behavior: contain;
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-sans);
+  font-feature-settings: "rlig" 1, "calt" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Scroll performansı için text rendering optimize */
+  text-rendering: optimizeSpeed;
+  /* Overscroll bounce'u engelle */
+  overscroll-behavior-y: none;
+}
+
+/* ============================================
+   SCROLL PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+/* Scroll sırasında pointer events'i devre dışı bırak */
+.is-scrolling * {
+  pointer-events: none !important;
+}
+
+/* Passive scroll için optimize edilmiş konteynerler */
+.scroll-container {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  scroll-behavior: smooth;
+}
+
+/* Scroll performansı için GPU layer hints */
+.scroll-optimized {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Scrollbar Stilleri - Espor Teması */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--optimi-darker));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--optimi-border));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
+
+/* Firefox Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--optimi-border)) hsl(var(--optimi-darker));
+}
+
+/* Selection */
+::selection {
+  background: hsl(var(--optimi-gold) / 0.3);
+  color: hsl(var(--foreground));
+}
+
+/* Focus Visible */
+:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Gradient Backgrounds */
+.bg-gradient-optimi {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--optimi-darker)) 0%,
+    hsl(var(--optimi-dark)) 50%,
+    hsl(var(--optimi-surface)) 100%
+  );
+}
+
+.bg-gradient-gold {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--optimi-gold)) 0%,
+    hsl(38 92% 40%) 100%
+  );
+}
+
+/* Text Gradients */
+.text-gradient-gold {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--optimi-gold)) 0%,
+    hsl(38 92% 60%) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-blue {
+  background: linear-gradient(
+    135deg,
+    hsl(217 91% 60%) 0%,
+    hsl(199 89% 48%) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-emerald {
+  background: linear-gradient(
+    135deg,
+    hsl(160 84% 39%) 0%,
+    hsl(142 71% 45%) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glow Effects */
+.glow-gold {
+  box-shadow: 0 0 20px hsl(var(--optimi-gold) / 0.4);
+}
+
+.glow-gold-sm {
+  box-shadow: 0 0 10px hsl(var(--optimi-gold) / 0.3);
+}
+
+/* Glass Effect - Performans optimize edilmiş versiyon */
+.glass {
+  background: hsl(var(--optimi-surface) / 0.95);
+  border: 1px solid hsl(var(--border) / 0.5);
+}
+
+/* Blur sadece gerektiğinde - backdrop-filter pahalı bir işlem */
+@supports (backdrop-filter: blur(10px)) {
+  .glass-blur {
+    background: hsl(var(--optimi-surface) / 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid hsl(var(--border) / 0.5);
+    /* GPU layer oluştur */
+    transform: translateZ(0);
+    will-change: backdrop-filter;
+  }
+}
+
+/* Header için optimize edilmiş glass efekti */
+.header-glass {
+  background: hsl(var(--optimi-darker) / 0.97);
+  border-bottom: 1px solid hsl(var(--border) / 0.5);
+  /* Sadece geçişlerde blur kullan, scroll sırasında değil */
+}
+
+/* Card Hover Effect - GPU Accelerated */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform;
+  transform: translate3d(0, 0, 0); /* GPU layer oluştur */
+  backface-visibility: hidden;
+  contain: layout style paint;
+}
+
+.card-hover:hover {
+  transform: translate3d(0, -4px, 0);
+  box-shadow: 0 10px 40px hsl(0 0% 0% / 0.4);
+}
+
+/* Optimized card için transition - sadece gerekli propertyler */
+.card-optimized {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  will-change: transform;
+  contain: layout style paint;
+}
+
+.card-optimized:hover {
+  transform: translate3d(0, -4px, 0);
+}
+
+/* Status Badge Colors */
+.status-live {
+  background: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+}
+
+.status-upcoming {
+  background: hsl(var(--info));
+  color: hsl(var(--info-foreground));
+}
+
+.status-completed {
+  background: hsl(var(--success));
+  color: hsl(var(--success-foreground));
+}
+
+.status-registration {
+  background: hsl(var(--optimi-gold));
+  color: hsl(var(--primary-foreground));
+}
+
+/* ============================================
+   RÜTBE SİSTEMİ STİLLERİ
+   ============================================ */
+
+/* Rütbe Badge Renkleri */
+.rank-badge-bronze {
+  background: linear-gradient(135deg, hsl(var(--rank-bronze)), hsl(var(--rank-bronze-dark)));
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.rank-badge-silver {
+  background: linear-gradient(135deg, hsl(var(--rank-silver)), hsl(var(--rank-silver-dark)));
+  color: #1a1a1a;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.rank-badge-gold {
+  background: linear-gradient(135deg, hsl(var(--rank-gold)), hsl(var(--rank-gold-dark)));
+  color: #1a1a1a;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.rank-badge-platinum {
+  background: linear-gradient(135deg, hsl(var(--rank-platinum)), hsl(var(--rank-platinum-dark)));
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.rank-badge-diamond {
+  background: linear-gradient(135deg, hsl(var(--rank-diamond)), hsl(var(--rank-diamond-dark)));
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.rank-badge-mastery {
+  background: linear-gradient(135deg, hsl(var(--rank-mastery)), hsl(var(--rank-mastery-dark)));
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.rank-badge-master {
+  background: linear-gradient(135deg, hsl(var(--rank-master)), hsl(var(--rank-master-dark)));
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Rütbe Glow Efektleri */
+.rank-glow-bronze {
+  box-shadow: 0 0 15px hsl(var(--rank-bronze) / 0.4);
+}
+
+.rank-glow-silver {
+  box-shadow: 0 0 15px hsl(var(--rank-silver) / 0.4);
+}
+
+.rank-glow-gold {
+  box-shadow: 0 0 20px hsl(var(--rank-gold) / 0.5);
+}
+
+.rank-glow-platinum {
+  box-shadow: 0 0 20px hsl(var(--rank-platinum) / 0.5);
+}
+
+.rank-glow-diamond {
+  box-shadow: 0 0 25px hsl(var(--rank-diamond) / 0.5);
+}
+
+.rank-glow-mastery {
+  box-shadow: 0 0 25px hsl(var(--rank-mastery) / 0.6);
+}
+
+.rank-glow-master {
+  box-shadow: 0 0 30px hsl(var(--rank-master) / 0.6);
+}
+
+/* Rütbe Border Renkleri */
+.rank-border-bronze {
+  border-color: hsl(var(--rank-bronze) / 0.5);
+}
+
+.rank-border-silver {
+  border-color: hsl(var(--rank-silver) / 0.5);
+}
+
+.rank-border-gold {
+  border-color: hsl(var(--rank-gold) / 0.5);
+}
+
+.rank-border-platinum {
+  border-color: hsl(var(--rank-platinum) / 0.5);
+}
+
+.rank-border-diamond {
+  border-color: hsl(var(--rank-diamond) / 0.5);
+}
+
+.rank-border-mastery {
+  border-color: hsl(var(--rank-mastery) / 0.5);
+}
+
+.rank-border-master {
+  border-color: hsl(var(--rank-master) / 0.5);
+}
+
+/* Rütbe Metin Renkleri */
+.rank-text-bronze {
+  color: hsl(var(--rank-bronze));
+}
+
+.rank-text-silver {
+  color: hsl(var(--rank-silver));
+}
+
+.rank-text-gold {
+  color: hsl(var(--rank-gold));
+}
+
+.rank-text-platinum {
+  color: hsl(var(--rank-platinum));
+}
+
+.rank-text-diamond {
+  color: hsl(var(--rank-diamond));
+}
+
+.rank-text-mastery {
+  color: hsl(var(--rank-mastery));
+}
+
+.rank-text-master {
+  color: hsl(var(--rank-master));
+}
+
+/* Rütbe İlerleme Çubuğu Gradientleri */
+.rank-progress-bronze {
+  background: linear-gradient(90deg, hsl(var(--rank-bronze-dark)), hsl(var(--rank-bronze)));
+}
+
+.rank-progress-silver {
+  background: linear-gradient(90deg, hsl(var(--rank-silver-dark)), hsl(var(--rank-silver)));
+}
+
+.rank-progress-gold {
+  background: linear-gradient(90deg, hsl(var(--rank-gold-dark)), hsl(var(--rank-gold)));
+}
+
+.rank-progress-platinum {
+  background: linear-gradient(90deg, hsl(var(--rank-platinum-dark)), hsl(var(--rank-platinum)));
+}
+
+.rank-progress-diamond {
+  background: linear-gradient(90deg, hsl(var(--rank-diamond-dark)), hsl(var(--rank-diamond)));
+}
+
+.rank-progress-mastery {
+  background: linear-gradient(90deg, hsl(var(--rank-mastery-dark)), hsl(var(--rank-mastery)));
+}
+
+.rank-progress-master {
+  background: linear-gradient(90deg, hsl(var(--rank-master-dark)), hsl(var(--rank-master)));
+}
+
+/* Master ve Mastery için özel animasyonlu arka plan */
+@keyframes rank-shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.rank-shimmer-mastery {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--rank-mastery)) 0%,
+    hsl(var(--rank-mastery) / 0.7) 25%,
+    hsl(282 100% 60%) 50%,
+    hsl(var(--rank-mastery) / 0.7) 75%,
+    hsl(var(--rank-mastery)) 100%
+  );
+  background-size: 200% auto;
+  animation: rank-shimmer 3s linear infinite;
+}
+
+.rank-shimmer-master {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--rank-master)) 0%,
+    hsl(var(--rank-master) / 0.7) 25%,
+    hsl(45 100% 60%) 50%,
+    hsl(var(--rank-master) / 0.7) 75%,
+    hsl(var(--rank-master)) 100%
+  );
+  background-size: 200% auto;
+  animation: rank-shimmer 2.5s linear infinite;
+}
+
+/* Rütbe icon pulse animasyonu */
+@keyframes rank-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.rank-icon-pulse {
+  animation: rank-pulse 2s ease-in-out infinite;
+}
+
+/* Scrollbar Gizleme */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE ve Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* ============================================
+   REDUCED MOTION SUPPORT
+   Erişilebilirlik için hareket azaltma
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .card-hover:hover {
+    transform: none;
+  }
+
+  .glow-gold,
+  .glow-gold-sm {
+    box-shadow: none;
+  }
+}
+
+/* ============================================
+   PERFORMANCE UTILITIES
+   ============================================ */
+
+/* GPU Layer - Animasyon için optimize edilmiş elementler */
+.gpu-layer {
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Content visibility - Görünmeyen içeriği render etme */
+.content-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
+/* Contain - Layout/paint optimizasyonu */
+.contain-layout {
+  contain: layout;
+}
+
+.contain-paint {
+  contain: paint;
+}
+
+.contain-strict {
+  contain: strict;
+}
+
+.contain-content {
+  contain: content;
+}
+
+/* Scroll performansı için section optimizasyonu */
+.section-optimized {
+  contain: layout style paint;
+  content-visibility: auto;
+  contain-intrinsic-size: 0 400px;
+}
+
+/* Fixed/sticky elementler için GPU optimizasyonu */
+.fixed-optimized {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+/* Transition optimizasyonu - all yerine spesifik propertyler */
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.transition-colors-fast {
+  transition-property: color, background-color, border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Hover efektleri için performans optimizasyonu */
+@media (hover: hover) {
+  .hover-lift {
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+  }
+  
+  .hover-lift:hover {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+/* Scroll-linked animations için optimizasyon */
+@supports (animation-timeline: scroll()) {
+  .scroll-animate {
+    animation-timeline: scroll();
+    animation-timing-function: linear;
+  }
+}
+
+/* Touch optimizations for mobile */
+@media (hover: none) and (pointer: coarse) {
+  .card-hover:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Daha büyük touch hedefleri */
+  button,
+  [role="button"],
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --border: 240 10% 40%;
+  }
+
+  .card-hover {
+    border-width: 2px;
+  }
+}
+
+/* Print styles - gereksiz elementleri gizle */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+}
