@@ -56,7 +56,7 @@ function TournamentCard({ tournament, featured = false }: TournamentCardProps) {
           </div>
 
           {/* Content */}
-          <div className="relative z-20 p-6 -mt-24">
+          <div className="relative z-20 p-5 sm:p-6 -mt-16 sm:-mt-20 md:-mt-24">
             <h3 className="text-xl md:text-2xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">
               {tournament.title}
             </h3>

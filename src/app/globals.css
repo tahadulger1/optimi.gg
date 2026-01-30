@@ -534,8 +534,11 @@
 html {
   /* Smooth scroll - native performans */
   scroll-behavior: smooth;
-  /* Overscroll davranışını kontrol et */
-  overscroll-behavior: contain;
+  /* Overscroll davranışı:
+     - Dikeyde (Y) pull-to-refresh / sayfa overscroll serbest
+     - Yatayda (X) zincirlemeyi kısıtla (carousel'ler için) */
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: auto;
 }
 
 body {
@@ -547,8 +550,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* Scroll performansı için text rendering optimize */
   text-rendering: optimizeSpeed;
-  /* Overscroll bounce'u engelle */
-  overscroll-behavior-y: none;
+  /* Mobil pull-to-refresh'i engelleme */
+  overscroll-behavior-y: auto;
 }
 
 /* ============================================
